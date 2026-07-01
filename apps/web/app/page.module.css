@@ -1,0 +1,122 @@
+.page {
+  --gray-rgb: 0, 0, 0;
+  --gray-alpha-200: rgba(255, 255, 255, 0.08);
+  --gray-alpha-100: rgba(255, 255, 255, 0.05);
+
+  --button-primary-hover: #383838;
+  --button-secondary-hover: #f2f2f2;
+
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #0a0a0a;
+  color: white;
+  font-family: var(--font-geist-sans);
+}
+
+.main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 4rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.header h1 {
+  font-size: 3.5rem;
+  margin-bottom: 0.5rem;
+  background: linear-gradient(90deg, #4ade80, #3b82f6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.header p {
+  font-size: 1.2rem;
+  color: #888;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  width: 100%;
+  margin-bottom: 4rem;
+}
+
+.card {
+  padding: 2rem;
+  border-radius: 12px;
+  background: var(--gray-alpha-100);
+  border: 1px solid var(--gray-alpha-200);
+  transition: transform 0.2s, border-color 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  border-color: #4ade80;
+}
+
+.card h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #4ade80;
+}
+
+.card p {
+  color: #aaa;
+  margin-bottom: 1.5rem;
+}
+
+.status {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  color: #666;
+  font-weight: bold;
+}
+
+.ctas {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.ctas a {
+  padding: 0.8rem 2rem;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: opacity 0.2s;
+}
+
+.primary {
+  background: white;
+  color: black !important;
+}
+
+.secondary {
+  border: 1px solid #333;
+  color: white;
+}
+
+.footer {
+  padding: 2rem;
+  text-align: center;
+  border-top: 1px solid #1a1a1a;
+  color: #444;
+}
+
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+  .main {
+    padding: 2rem;
+  }
+}
